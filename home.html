@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Assignment 2 - Home Page</title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="audiostyle.css">
+        <script src="home.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script> 
+    </head>
+
+    <body>
+        <h1>INST 377 - Home Page</h1>
+
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <h1>These are some activities we will do today!</h2>
+
+        <div class="button-container">
+            <button class="stocks-button" role="button"><a href="stocks.html">Stocks</a></button>
+            <button class="dogs-button" role="button"><a href="dogs.html">Dogs</a></button>
+        </div>
+
+        <div class="quote-box" id="quote-box">
+            <h3 id="quote-heading">Quote of the Page Load</h3>
+            <p id="quote-para"></p>
+        </div>
+
+        <div id="loading-quote" style="display: none;">Loading..........Please wait!</div>
+
+        <div id="home-instructions">
+            <div id="instructions">
+                <h2>In this Web Page there are options to Navigate using Audio!</h3>
+                    <h3>Ensure your Microphone is enabled to be able to use this feature</h5>
+                    <ul>
+                        <li>Navigate to Different Page
+                            <ul><li>Say:<strong> Navigate to &lt;page&gt </strong></li></ul>
+                        </li>
+                        <li>Change the Page color
+                            <ul><li>Say: <strong>Change the Color to &lt;color&gt </strong> </li></ul>
+                        </li>
+                        <li>Hear a "Hello" back in Computer Style
+                            <ul><li>Say: <strong>Hello</strong></li></ul>
+                        </li>
+                    </ul>        
+            </div>
+            <div id="audio-button">
+                <button id="start-listening" onclick="toggleListening(true)">Turn On Listening</button>
+                <button id="stop-listening" onclick="toggleListening(false)">Turn Off Listening</button>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
