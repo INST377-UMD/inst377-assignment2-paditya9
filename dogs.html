@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Assignment 2 - Dogs Page</title>
+    <link rel="stylesheet" href="dogs.css">
+    <link rel="stylesheet" href="audiostyle.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simple-slider.min.css"> -->
+  </head>
+
+  <body>
+    <script src="dogs.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script> 
+    <h1>INST 377 - Dogs Page</h1>
+
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="stocks.html">Stocks</a></li>
+        <li><a href="dogs.html">Dogs</a></li>
+      </ul>
+    </nav>
+
+    <h1>Doggos! 🐶</h1>
+
+    <div id="slider-container" data-simple-slider style="width:300px; height:300px"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+
+    <div id="breed-buttons"></div>
+
+    <div id="dog-breed-info-container"></div>
+
+    <div id="home-instructions">
+      <h2>In this Web Page there are options to Navigate using Audio!</h2>
+      <h3>Ensure your Microphone is enabled to be able to use this feature</h3>
+      <ul>
+        <li>Navigate to Different Page
+          <ul><li>Say:<strong> Navigate to &lt;page&gt;</strong></li></ul>
+        </li>
+        <li>Change the Page color
+          <ul><li>Say: <strong>Change the Color to &lt;color&gt;</strong> </li></ul>
+        </li>
+        <li>Hear a "Hello" back in Computer Style
+          <ul><li>Say: <strong>Hello</strong></li></ul>
+        </li>
+        <li> <strong>SPECIAL FEATURE</strong>: Load Dog Breed Information
+          <ul><li>Say: <strong>Load &lt;breed&gt</strong></li></ul>
+        </li>
+      </ul>
+
+      <div id="audio-button">
+        <button id="start-listening" onclick="toggleListening(true)">Turn On Listening</button>
+        <button id="stop-listening" onclick="toggleListening(false)">Turn Off Listening</button>
+      </div>
+    </div>
+  </body>
+</html>

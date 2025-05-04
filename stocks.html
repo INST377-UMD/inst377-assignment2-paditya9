@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Assignment 2 - Stocks Page</title>
+        <link rel="stylesheet" href="stocks.css">
+        <link rel="stylesheet" href="audiostyle.css">
+        <script src="stocks.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script> 
+    </head>
+
+    <body>
+        <h1>INST 377 - Stocks Page</h1>
+
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <h1>Let's look at some stocks chart today!</h2>
+
+        <div id="ticker-input">
+            <label for="ticket-name">Enter Stock Ticker Name: </label>
+            <input type="text" id="ticker-name-input" placeholder="AMZN" required minlength="2" maxlength="5"><br>
+
+            <label for="chart-date">What chart date do you want? </label>
+            <select id="chart-date-input" required>
+                <option hidden disabled selected>-- Select Option --</option>
+                <option value="30">30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+            </select><br>
+
+            <input type="button" id="submit" value="Lookup">
+        </div>
+
+        <div>
+            <canvas id="stockChart"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </div>
+
+        <table id="stock-head">
+            <thead>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Comment Count</th>
+                    <th>Sentiment</th>
+                </tr>
+            </thead>
+            <tbody id="stock-body"></tbody>
+        </table>
+
+
+
+        <div id="home-instructions">
+            <div id="instructions">
+                <h2>In this Web Page there are options to Navigate using Audio!</h3>
+                    <h3>Ensure your Microphone is enabled to be able to use this feature</h5>
+                    <ul>
+                        <li>Navigate to Different Page
+                            <ul><li>Say:<strong> Navigate to &lt;page&gt </strong></li></ul>
+                        </li>
+                        <li>Change the Page color
+                            <ul><li>Say: <strong>Change the Color to &lt;color&gt </strong> </li></ul>
+                        </li>
+                        <li>Hear a "Hello" back in Computer Style
+                            <ul><li>Say: <strong>Hello</strong></li></ul>
+                        </li>
+                        <li> <strong>SPECIAL FEATURE</strong>: Load Stock Information
+                            <ul><li>Say: <strong>Lookup &lt;Stock&gt</strong></li></ul>
+                          </li>
+                    </ul>        
+            </div>
+            <div id="audio-button">
+                <button id="start-listening" onclick="toggleListening(true)">Turn On Listening</button>
+                <button id="stop-listening" onclick="toggleListening(false)">Turn Off Listening</button>
+            </div>
+        </div>
+    </body>
+</html>
